@@ -24,3 +24,8 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+// process.argv.forEach((val, index) => {
+//   console.log(convert(`${index}: ${val}`));
+// });
+let argv = process.argv.slice(2).join(" ")
+console.log(convert(argv));
