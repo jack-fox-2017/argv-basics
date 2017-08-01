@@ -32,20 +32,12 @@ let convert = (sentence) => {
 //
 
 
-//https://nodejs.org/api/readline.html
-const readline = require('readline');
+let args = process.argv;
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-  prompt: 'Input sentence here: '
-});
+let word = [];
+for(let i = 2; i < args.length; i++)
+{
+  word.push(args[i])
+}
 
-rl.prompt();
-
-rl.on('line', (input) => {
-  console.log(`Received: ${input}`);
-  console.log(`Pig latin word: ${pigLatin(input)}`);
-});
-
-rl.prompt();
+console.log(convert(word.join(' ')));
