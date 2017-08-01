@@ -24,3 +24,15 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+
+let execute = process.argv
+// console.log(execute);
+let result = []
+if(execute[2] === undefined){
+  console.log("Format penulisan yang benar --> 'node pig_latin.js ini kata yang akan berubah'");
+} else {
+  for(let i = 2; i < execute.length; i++){
+    result.push(convert(execute[i]))
+  }
+  console.log(result.join(" ")); 
+}
