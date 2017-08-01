@@ -24,3 +24,5 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let argv = process.argv.splice(2,1).join('');
+console.log(convert(argv));
