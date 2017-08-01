@@ -24,3 +24,5 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let arr = process.argv.filter((item, index) => {return index >= 2})
+console.log(convert(arr.join(' ')));
