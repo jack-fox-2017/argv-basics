@@ -10,17 +10,17 @@ let pigLatin = (word) => {
 }
 
 let isPowel = (char) => {
-  return (/^[aeiou]$/i).test(char);
+  return (/^[aeiou]$/i).test(char);//regex
 }
 
 let convert = (sentence) => {
   let result = []
-  let words = sentence.trim().split(/\s+/g)
-  for (let i=0;i<words.length;i++) {
-    result[i] = pigLatin(words[i])
+  for (let i=0;i<sentence.length;i++) {
+    result[i] = pigLatin(sentence[i])
   }
 
   return result.join(" ")
 }
 
-// Your CLI code here
+let argvPertama = process.argv.slice(2)
+console.log(convert(argvPertama))
