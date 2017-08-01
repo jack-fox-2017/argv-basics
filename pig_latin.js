@@ -24,3 +24,14 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let args = process.argv
+console.log(args);
+let newArray = [];
+let i=2
+while(args.length > i)
+{
+  newArray.push(convert(args[i]))
+  i++
+}
+
+console.log(newArray.join(" "));
