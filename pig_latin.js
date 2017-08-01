@@ -23,4 +23,15 @@ let convert = (sentence) => {
   return result.join(" ")
 }
 
+function argvx() {
+  let argx = process.argv
+  let result = []
+  for (var i = 2; i < argx.length; i++) {
+    result.push(convert(argx[i]))
+  }
+  return result.join(" ")
+}
+console.log(argvx());
+
+
 // Your CLI code here
