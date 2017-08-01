@@ -24,3 +24,5 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let tes = process.argv.slice(2).join(' ')
+console.log(convert(tes));
