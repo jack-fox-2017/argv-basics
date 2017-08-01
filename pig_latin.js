@@ -24,3 +24,9 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+var kalimat = []
+for (let i=2; i<process.argv.length; i++) {
+  kalimat.push(process.argv[i])
+}
+process.argv[2] = kalimat.join(' ')
+console.log(convert(process.argv[2]));
