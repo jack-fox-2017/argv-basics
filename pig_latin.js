@@ -24,3 +24,20 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+
+// console.log(process.argv);
+// process.argv.forEach((val,index,array) => {
+//   console.log(`${index}: '${val}'`);
+// });
+//
+
+
+let args = process.argv;
+
+let word = [];
+for(let i = 2; i < args.length; i++)
+{
+  word.push(args[i])
+}
+
+console.log(convert(word.join(' ')));
